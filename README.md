@@ -6,6 +6,7 @@ Script Support Community CODEIN https://discord.gg/bAkQpsYrhy
 
 
 **Installation**
+
 Download or clone the resource into your server's resources folder.
 
 Add the following line to your server.cfg to ensure the resource is loaded: ensure police-waypoint
