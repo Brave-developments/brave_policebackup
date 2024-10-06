@@ -7,8 +7,11 @@ Script Support Community CODEIN https://discord.gg/bAkQpsYrhy
 
 **Installation**
 Download or clone the resource into your server's resources folder.
+
 Add the following line to your server.cfg to ensure the resource is loaded: ensure police-waypoint
+
 If you are using InteractSound, copy the sound files from the install sound folder (inside this resource) to your standalone/interact-sound/client/html/sounds directory.
+
 The sound files should be named:
 code1.ogg (Foot Pursuit)
 code2.ogg (Vehicle Pursuit)
