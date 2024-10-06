@@ -1,6 +1,7 @@
 **Features of the Script**
 
-Script Made and Promoted by Brave_developments https://www.youtube.com/@Bravedevelopment
+Script Made and Promoted by Brave_developments https://www.youtube.com/@Bravedevelopment   
+
 Script Support Community CODEIN https://discord.gg/bAkQpsYrhy
 
 
