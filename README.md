@@ -1,11 +1,11 @@
-**Features of the Script**
+## Features of the Script
 
 Script Made and Promoted by Brave_developments https://www.youtube.com/@Bravedevelopment   
 
 Script Support Community CODEIN https://discord.gg/bAkQpsYrhy
 
 
-**Installation**
+## Installation
 
 Download or clone the resource into your server's resources folder.
 
@@ -19,12 +19,12 @@ code2.ogg (Vehicle Pursuit)
 code3.ogg (Armed Robbery)
 code99.ogg (Heavy 10-10)
 
-**Future Plan**
+## Future Plan
 Add support for Different language Audio
 Add Support for Different Locale
 
 
-**Request Police Backup**
+## Request Police Backup
 
 Allows police officers to request backup for different scenarios with custom keybinds.
 Backup requests include:
@@ -33,7 +33,7 @@ Code 2: Vehicle Pursuit
 Code 3: Armed Robbery
 Code 99: Heavy 10-10 (Serious armed incidents)
 
-**Custom Notifications:**
+## Custom Notifications:
 
 The script supports three types of notifications, depending on what system is available:
 qb-notify
@@ -41,7 +41,7 @@ ox_lib
 okokNotify
 If none are available, a fallback to chat message is used.
 
-**Custom Keybindings**
+## Custom Keybindings
 
 Officers can trigger backup requests with predefined keybinds:
 HOME: Requests Code 1 (Foot Pursuit)
@@ -50,7 +50,7 @@ PAGEUP: Requests Code 3 (Armed Robbery)
 END: Requests Code 99 (Heavy 10-10)
 Keybindings can be easily changed in the Fivem Keybinding settings in Game.
 
-**Custom Sounds**
+## Custom Sounds
 
 Plays a unique sound for each type of backup request (using InteractSound).
 Sounds include:
@@ -59,12 +59,12 @@ code2.ogg for Vehicle Pursuit.
 code3.ogg for Armed Robbery.
 code99.ogg for Heavy 10-10.
 
-**Customization:**
+## Customization:
 Keybindings: Can be adjusted easily to match preferred keys.
 Notification System: Works with multiple notification systems, ensuring flexibility across different server setups.
 Sound Files: Custom sounds can be easily swapped by changing the sound file names in the client script and ensuring the appropriate sound files are included in the server.
 
-**Dependencies**
+## Dependencies
 
 QBCore: This script is built for the QBCore framework.
 InteractSound: Used for playing the alert sounds.
