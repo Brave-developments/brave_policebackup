@@ -1,4 +1,5 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+--local QBCore = exports['qb-core']:GetCoreObject()
+local ESX = exports['es_extended']:getSharedObject()
 
 local function sendBackupRequest(codeType, codeMessage, blipColor, soundName)
     local playerPed = PlayerPedId()
@@ -64,28 +65,28 @@ RegisterKeyMapping('code3backup', 'Request Backup for Armed Robbery (Code 3)', '
 RegisterKeyMapping('code99backup', 'Request Backup for Heavy 10-10 (Code 99)', 'keyboard', 'END')
 
 RegisterCommand('code1backup', function()
-    local playerData = QBCore.Functions.GetPlayerData()
+    local playerData = ESX.GetPlayerData()
     if playerData.job.name == "police" then
         requestBackup(1)
     end
 end)
 
 RegisterCommand('code2backup', function()
-    local playerData = QBCore.Functions.GetPlayerData()
+    local playerData = ESX.GetPlayerData()
     if playerData.job.name == "police" then
         requestBackup(2)
     end
 end)
 
 RegisterCommand('code3backup', function()
-    local playerData = QBCore.Functions.GetPlayerData()
+    local playerData = ESX.GetPlayerData()
     if playerData.job.name == "police" then
         requestBackup(3)
     end
 end)
 
 RegisterCommand('code99backup', function()
-    local playerData = QBCore.Functions.GetPlayerData()
+    local playerData = ESX.GetPlayerData()
     if playerData.job.name == "police" then
         requestBackup(99)
     end
