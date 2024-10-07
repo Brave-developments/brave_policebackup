@@ -64,34 +64,6 @@ RegisterKeyMapping('code2backup', 'Request Backup for Vehicle Pursuit (Code 2)',
 RegisterKeyMapping('code3backup', 'Request Backup for Armed Robbery (Code 3)', 'keyboard', 'PAGEUP')
 RegisterKeyMapping('code99backup', 'Request Backup for Heavy 10-10 (Code 99)', 'keyboard', 'END')
 
---[[RegisterCommand('code1backup', function()
-    local playerData = QBCore.Functions.GetPlayerData()
-    if playerData.job.name == "police" then
-        requestBackup(1)
-    end
-end)
-
-RegisterCommand('code2backup', function()
-    local playerData = QBCore.Functions.GetPlayerData()
-    if playerData.job.name == "police" then
-        requestBackup(2)
-    end
-end)
-
-RegisterCommand('code3backup', function()
-    local playerData = QBCore.Functions.GetPlayerData()
-    if playerData.job.name == "police" then
-        requestBackup(3)
-    end
-end)
-
-RegisterCommand('code99backup', function()
-    local playerData = QBCore.Functions.GetPlayerData()
-    if playerData.job.name == "police" then
-        requestBackup(99)
-    end
-end)]]
-
 RegisterCommand('code1backup', function()
     local playerData = ESX.GetPlayerData()
     if playerData.job.name == "police" then
