@@ -1,4 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
+local lastBackupRequestTime = 0
+local cooldownTime = 30000 -- 30 seconds in milliseconds
 
 local function sendBackupRequest(codeType, codeMessage, blipColor, soundName)
     local playerPed = PlayerPedId()
@@ -47,14 +49,23 @@ local function showNotification(message)
 end
 
 local function requestBackup(codeType)
-    if codeType == 1 then
-        sendBackupRequest("Code 1: Foot Pursuit", "CODE 1: Foot Pursuit", 38, "code1")
-    elseif codeType == 2 then
-        sendBackupRequest("Code 2: Vehicle Pursuit", "CODE 2: Vehicle Pursuit", 47, "code2")
-    elseif codeType == 3 then
-        sendBackupRequest("Code 3: Armed Robbery", "CODE 3: Armed Robbery", 1, "code3")
-    elseif codeType == 99 then
-        sendBackupRequest("Code 99: Heavy 10-10", "CODE 99: Heavy 10-10", 60, "code99")
+    local currentTime = GetGameTimer()
+    
+    -- Check if the cooldown has passed
+    if currentTime - lastBackupRequestTime >= cooldownTime then
+        lastBackupRequestTime = currentTime
+        if codeType == 1 then
+            sendBackupRequest("Code 1: Foot Pursuit", "CODE 1: Foot Pursuit", 38, "code1")
+        elseif codeType == 2 then
+            sendBackupRequest("Code 2: Vehicle Pursuit", "CODE 2: Vehicle Pursuit", 47, "code2")
+        elseif codeType == 3 then
+            sendBackupRequest("Code 3: Armed Robbery", "CODE 3: Armed Robbery", 1, "code3")
+        elseif codeType == 99 then
+            sendBackupRequest("Code 99: Heavy 10-10", "CODE 99: Heavy 10-10", 60, "code99")
+        end
+    else
+        local remainingTime = math.ceil((cooldownTime - (currentTime - lastBackupRequestTime)) / 1000)
+        showNotification("You need to wait " .. remainingTime .. " seconds before requesting backup again.")
     end
 end
 
