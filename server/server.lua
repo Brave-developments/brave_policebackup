@@ -4,6 +4,8 @@ RegisterNetEvent('police:backupRequest')
 AddEventHandler('police:backupRequest', function(coords, codeType)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
+    -- guard: an invalid/disconnecting source would error here
+    if not Player then return end
     local officerName = Player.PlayerData.charinfo.firstname .. " " .. Player.PlayerData.charinfo.lastname
 
     if Player.PlayerData.job.name == "police" then
