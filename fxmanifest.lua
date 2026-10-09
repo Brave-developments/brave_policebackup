@@ -5,6 +5,11 @@ author 'Brave_development'
 description 'Police Backup Script'
 version '1.0.0'
 
+-- Shared configuration
+shared_scripts {
+    'config.lua'
+}
+
 -- Client-side scripts
 client_scripts {
     'client/*.lua'  -- Load all Lua files inside the client folder
